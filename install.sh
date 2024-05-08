@@ -13,3 +13,5 @@ crontab crontab_new
 rm crontab_new
 sleep 1
 init u
+sleep 1
+systemctl daemon-reload
